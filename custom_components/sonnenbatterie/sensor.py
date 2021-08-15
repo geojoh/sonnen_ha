@@ -261,8 +261,17 @@ class SonnenBatterieMonitor:
         friendlyname="Grid In/Out Power"
         self._AddOrUpdateEntity(sensorname,friendlyname,val,unitname)
 
+        """production state"""
+        sensorname=allSensorsPrefix+"Production_W"
+        unitname="W"
+        friendlyname="Energy Production"
+        self._AddOrUpdateEntity(sensorname,friendlyname,val,unitname)
 
-
+        """consumption state"""
+        sensorname=allSensorsPrefix+"Consumption_W"
+        unitname="W"
+        friendlyname="Energy Consumption"
+        self._AddOrUpdateEntity(sensorname,friendlyname,val,unitname)       
 
         """battery states"""
         """battery load percent"""
